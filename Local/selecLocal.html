@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Select</title>
+</head>
+<body>
+    <label for="province">광역시 / 도 선택 : </label>
+    <select id="province" onchange="updateCities()">
+        <option value="">선택하세요</option>
+        <option value="seoul">서울</option>
+        <option value="gyeonggi">경기도</option>
+        <option value="안천">인천</option>
+        <option value="강원">강원도</option>
+        <option value="충청">충청도</option>
+        <option value="sejong">세종</option>
+        <option value="대전">대전</option>
+        <option value="대구">대구</option>
+        <option value="울산">울산</option>
+        <option value="busan">부산</option>
+        <option value="gyeongsang">경상도</option>
+        <option value="gwangju">광주</option>
+        <option value="jeolla">전라도</option>
+        <option value="jeju">제주도</option>
+    </select>
+
+    <lavel for="city">지역 세부 선택 : </lavel>
+    <select id="city">
+        <option value="">먼저 광역시/도를 선택하세요</option>
+    </select>
+
+    <script>
+        const citiesByProvince = {
+            gyeonggi: ["수원시", "용인시"],
+            jeolla : ["장성군", "담양군"]
+        };
+    </script>
+</body>
+</html>
