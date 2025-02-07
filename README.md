@@ -4,7 +4,7 @@
 ![image](https://github.com/user-attachments/assets/ced84a8e-75c8-4edb-acf8-d52315312725)
 
 
-## <a href="https://ldr7xior.github.io/JSTour/" class="page">main page</a>
+## <a href="https://ldr7xior.github.io/JSTour/" class="page">진행상황 눈으로 보기~</a>
 
 ## 지아 진행상황
 <ur>
