@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Record</title>
+</head>
+<body>
+    <h1>Welcome Tour Record!</h1>
+    <p>
+    <strong>Tour Record</strong>에 오신 것을 환영합니다<br>
+    이 곳에서 여러분만의 여행을 기록하고 다른 사람들의 여행을 구경해보세요
+    </p>
+</body>
+</html>
