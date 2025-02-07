@@ -9,8 +9,9 @@
 ## 지아 진행상황
 <ur>
   <li>로그인 페이지 html 구조 생성 [25.02.06]</li>
-  <li><a href="myPage" class="page">마이 페이지</a> html 구조 생성 [25.02.06]</li>
+  <li>마이 페이지 html 구조 생성 [25.02.06]</li>
   <li><a href="login" class="page">로그인 페이지</a> , 회원가입 페이지 수정 및 js 추가 [25.02.07]</li>
+  <li><a href="myPage" class="page">마이 페이지</a> 추천 누른 글 html 추가 [25.02.06]</li>
 </ur>
 
 ## 한비 진행상황
