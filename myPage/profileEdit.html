@@ -8,19 +8,23 @@
 <body>
     <h2>프로필 수정</h2>
     <div>
-        <button type="submit">닉네임 수정</button>
-        <form>
+        <button type="submit" id="nicknameEditBtn">닉네임 수정</button>
+        <form id="nameForm">
             <label for="name">닉네임&nbsp;&nbsp;</label><br>
-            <input type="text" id="name" name="name"><br>    
+            <input type="text" id="name" name="name"><br>
+            <button type="button" id="saveNicknameBtn">확인</button><br>
         </form>
        </div>
     <div>
-        <button type="submit">프로필 사진 수정</button>
-        <form>
+        <button type="submit" id="profileImgEditBtn">프로필 사진 수정</button>
+        <form id="imageForm">
             <label for="profile_img">프로필 사진 선택</label><br>
             <input type="file" id="profile_img" name="profile_img"><br>
+            <button type="button" id="saveProfileImgBtn">확인</button><br>
         </form>
     </div>
     <button type="submit" onclick="location.href='mypage.html'">돌아가기</button>
 </body>
 </html>
+
+<script defer src="edit.js"></script>

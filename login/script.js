@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
             message.innerText = `${userData.name}님, 로그인 성공!`;
 
             setTimeout(() => {
-                window.location.href = "JSTour/mainpage.html";
+                window.location.href = "/myPage/mypage.html";
             }, 1000);
         });
     }
