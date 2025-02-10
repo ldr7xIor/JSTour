@@ -31,10 +31,28 @@
     </select>
 
     <script>
-        const citiesByProvince = {
+        const cities= {
+            seoul : ["강남/역삼/삼성", "신사/청담/압구정", "서초/교대/강동", "을지로/명동/중구/동대문", "서울역/이태원/용산", "종로/인사동", "홍대/합정/마포/서대문", "여의도", "영등포역", "구로/신도림/금천", "김포공항/염창/강서", "건대입구/성수/왕십리", "성북/강북/노원/도봉"],
             gyeonggi: ["수원시", "용인시"],
             jeolla : ["장성군", "담양군"]
         };
+
+        function updateCities(){
+            const provinceSelect = document.getElementById("province");
+            const citySelect = document.getElementById("city");
+            const selectedProvince = provinceSelect.value;
+
+            citySelect.innerHTML = '<option value="">시/군/구 선택</option>';
+
+            if(selectedProvince && cities[selectedProvince]) {
+                cities[selectedProvince].forEach(city => {
+                    const option = document.createElement("option");
+                    option.value = city;
+                    option.textContent = city;
+                    citySelect.appendChild(option);                    
+                });
+            }
+        }
     </script>
 </body>
 </html>
