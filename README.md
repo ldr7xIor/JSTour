@@ -18,5 +18,6 @@
 <ur>
   <li>메인 페이지 html 구조 생성 [25.02.06]</li>
   <li><a href="mainpage.html" class="page">메인 페이지</a> 지역선택 html 추가 [25.02.07]</li>
-  <li><a href="Local" class="page">지역선택 페이지</a> html 생성 & 광역시/도 선택 상자 추가 [25.02.07]</li>
+  <li>지역선택 페이지 html 생성 & 광역시/도 선택 상자 추가 [25.02.07]</li>
+  <li><a href="Local" class="page">지역선택 페이지</a> 세부지역 선택 함수 추가 [25.02.10]</li>
 </ur>
