@@ -38,7 +38,6 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
 
-        // 프로필 사진 저장 기능
         saveProfileImgBtn.addEventListener("click", function () {
             const fileInput = document.getElementById("profile_img");
             const file = fileInput.files[0];
@@ -46,11 +45,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 const reader = new FileReader();
                 reader.onload = function (e) {
                     userData.profilePicture = e.target.result;
-                    localStorage.setItem(loggedInUser, JSON.stringify(userData)); // 프로필 이미지 업데이트
+                    localStorage.setItem(loggedInUser, JSON.stringify(userData)); // 로컬 스토리지 업데이트
+        
                     alert("프로필 사진이 변경되었습니다.");
+                    location.href = "mypage.html"; // 변경 즉시 적용되도록 페이지 새로고침
                 };
                 reader.readAsDataURL(file);
             }
         });
+        
     }
 });
