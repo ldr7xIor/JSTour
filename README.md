@@ -12,8 +12,8 @@
   <li>마이 페이지 html 구조 생성 [25.02.06]</li>
   <li>로그인, 회원가입 페이지 수정 및 js 추가 [25.02.07]</li>
   <li>마이 페이지 추천 누른 글 html 추가 [25.02.07]</li>
-  <li><a href="login" class="page">로그인 페이지</a>, 회원가입 페이지 수정 및 js 추가(프로필 수정을 위해서) [25.02.10]</li>
-  <li><a href="myPage" class="page">마이 페이지</a> profileEdit.html, edit.js 수정 및 추가 [25.02.10]</li>
+  <li>로그인 페이지, 회원가입 페이지 수정 및 js 추가(프로필 수정을 위해서) [25.02.10]</li>
+  <li>마이 페이지 profileEdit.html, edit.js 수정 및 추가 [25.02.10]</li>
   <li><a href="myPage" class="page">마이 페이지</a> 프로필 사진도 수정 가능 [25.02.12]</li>
   <li><a href="login" class="page">로그인 페이지</a>, 로그인 후 다른 페이지로 리디렉션 성공 [25.02.12]</li>
 </ur>
