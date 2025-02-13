@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Local Select</title>
+    <title>reviewList</title>
 </head>
 <body>
     <label for="province">광역시 / 도 선택 : </label>
@@ -20,7 +20,7 @@
         <option value="jeju">제주</option>
     </select>
 
-    <lavel for="city">지역 세부 선택 : </lavel>
+    <label for="city">지역 세부 선택 : </label>
     <select id="city" onchange="writingReview()">
         <option value="">먼저 광역시/도를 선택하세요</option>
     </select>
@@ -62,10 +62,22 @@
         function writingReview() {
             const provinceSelect = document.getElementById("province").value;
             const citySelect = document.getElementById("city").value;
+            const btnexist = document.getElementById("WriteBtn")
 
             if(provinceSelect == "seoul" && citySelect == "강남/역삼/삼성") {
-                const btn = document.createElement("button");
-                document.body.appendChild(btn);
+                if(!btnexist) {
+                    const btn = document.createElement("button");
+                    btn.textContent = "글 작성";
+                    btn.id = "WriteBtn";
+                    btn.onclick = function() {
+                        location.href='writeReview.html'
+                    };
+                    document.body.appendChild(btn);
+                }
+            } else {
+                if(btnexist) {
+                    btnexist.remove();
+                }
             }
         }
     </script>
