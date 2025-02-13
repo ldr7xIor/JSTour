@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <div id="profile">
                     <img src="${userData.profilePicture}" alt="Profile">
                     <span>${userData.name}</span>
-                    <a href="./myPage/mypage.html">마이페이지</a> /
+                    <a href="myPage/mypage.html">마이페이지</a> /
                     <a href="#" id="logout">로그아웃</a>
                 </div>
             `;
