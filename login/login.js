@@ -21,8 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             sessionStorage.setItem("loggedInUser", id);  // 로그인한 사용자 저장
 
-            // 로그인 성공 후 mypage로 리다이렉트
-            window.location.href = "../myPage/mypage.html";
+            window.location.href = "../mainpage.html";
         });
     }
 });
