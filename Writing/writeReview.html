@@ -9,10 +9,7 @@
     <h3>글 작성</h3>
     <form>
         제목 : <input type="text"> <br> <br>
-        여행 지역 : <br>
-        <label for = "infor" style="color:darkgray; font-size: x-small;">아래 박스에서 지역을 선택한 후 추가 버튼을 눌러주세요.</label><br>
-    </form>
-
+        여행 지역 추가 
 
     <label for="province" style="color: dimgray; font-size: small;">광역시 / 도 선택 : </label>
     <select id="province" onchange="updateCities()">
@@ -33,7 +30,11 @@
         <option value="">먼저 광역시/도를 선택하세요</option>
     </select>
 
-    <button>추가</button>
+    <button id="addRegion">추가</button>
+
+    <br>
+    <label for = "infor" style="color:darkgray; font-size: x-small;">위 박스에서 지역을 선택한 후 추가 버튼을 눌러주세요.</label><br>
+    </form>
 
     <script>
         const cities= {
@@ -62,6 +63,23 @@
                     option.textContent = city;
                     citySelect.appendChild(option);                    
                 });
+            }
+        }
+
+        const addBtn = document.getElementById("addRegion");
+        addBtn.addEventListener("click", addReg)
+
+        function addReg() {
+            const provinceSelect = document.getElementById("province");
+            const citySelect = document.getElementById("city");
+            const valueProv = provinceSelect.value;
+            const valueCity = citySelect.value;
+
+            if(valueCity != "" && valueProv != "") {
+                alert("추가되었습니다.")
+            }
+            else {
+                alert("지역을 선택해주세요.")
             }
         }
     </script>
