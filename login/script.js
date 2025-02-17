@@ -9,9 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const password = document.getElementById("signupPassword").value;
             const passwordConfirm = document.getElementById("password_confirm").value;
 
-            // 기본 프로필 사진 URL
-            const defaultProfilePicture = "나기.jpg"; // 여기에 기본 이미지 URL을 넣어주세요.
-
+            const defaultProfilePicture = "/myPage/나기.jpg";
             if (!name || !id || !password || !passwordConfirm) {
                 alert("모든 필드를 입력해주세요.");
                 return;
@@ -27,7 +25,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 return;
             }
 
-            // 기본 프로필 사진을 포함한 사용자 데이터 저장
             const userData = { name, password, profilePicture: defaultProfilePicture };
             localStorage.setItem(id, JSON.stringify(userData));
 

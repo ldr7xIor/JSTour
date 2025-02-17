@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
             
             // 프로필 이미지 업데이트
             const profileImage = document.getElementById("profileImage");
-            profileImage.src = userData.profilePicture || "default.jpg"; // 기본 이미지 적용
+            profileImage.src = userData.profilePicture || "나기기.jpg"; // 기본 이미지 적용
         }
     }
 });
