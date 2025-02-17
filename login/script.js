@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const password = document.getElementById("signupPassword").value;
             const passwordConfirm = document.getElementById("password_confirm").value;
 
-            const defaultProfilePicture = "../myPage/나기.jpg";
+            const defaultProfilePicture = "myPage/나기.jpg";
             if (!name || !id || !password || !passwordConfirm) {
                 alert("모든 필드를 입력해주세요.");
                 return;
