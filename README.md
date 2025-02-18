@@ -20,7 +20,7 @@
   <li><a href="myPage" class="page">마이 페이지</a>에서 메인 페이지로 이동 가능 [25.02.13]</li>
   <li>로그인 페이지에서 로그인 하면 마이 페이지로 가는거 메인 페이지로 이동하게 수정 [25.02.14]</li>
   <li>회원가입 후 로그인 하면 기본 이미지로 나기가 들어가게 설정함 [25.02.17]</li>
-  <li><a href="mainpage.html" class="page">메인 페이지</a>에서 기본 이미지 띄우는 경로문제 해결, <a href="login" class="page">로그인 페이지</a> 로그인·회원가입할 때 autofocus 및 엔터 submit 설정</li>
+  <li><a href="mainpage.html" class="page">메인 페이지</a>에서 기본 이미지 띄우는 경로문제 해결, <a href="login" class="page">로그인 페이지</a> 로그인·회원가입할 때 autofocus 및 엔터 submit 설정 [25.02.18]</li>
 </ur>
 
 ## 한비 진행상황
