@@ -1,4 +1,4 @@
-# JSTour
+ㅌ# JSTour
 ![image](https://github.com/user-attachments/assets/eb9f5ccb-d0fc-470f-b5d4-54c5db3a09b9)
 ### 주제 수정
 ![image](https://github.com/user-attachments/assets/ced84a8e-75c8-4edb-acf8-d52315312725)
@@ -36,6 +36,6 @@
   <li>글 작성 페이지 제목 입력 창, 지역 추가 버튼 생성 [25.02.14]</li>
   <li>글 작성 페이지 지역 추가 버튼 이벤트 초기 설정 [25.02.17]</li>
   <li><a href="Writing" class="page">글 작성 페이지</a> 돌아가기 버튼 생성, 지역 추가 버튼 수정 [25.02.17]</li>
-  <li>알바 면접 이슈로 일단 조금만 했어요,, 돌아와서 좀 더 할게요ㅠ</li>
+  <li> 지역 추가 버튼 이벤트 : 왜 안될까............ 지역 추가 오류 확인하기...</li>
   <li>!! 해야할 일 !! : 현재 글 작성 가능한 지역 늘리기(테스트 용으로 5개 이하, 여러지역으로), 추가 버튼 이벤트 생성, 지역 삭제 고민 및 생성</li>
 </ur>
