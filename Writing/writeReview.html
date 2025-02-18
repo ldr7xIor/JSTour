@@ -36,6 +36,10 @@
     <label for = "infor" style="color:darkgray; font-size: x-small;">위 박스에서 지역을 선택한 후 추가 버튼을 눌러주세요.</label><br>
     </form>
 
+    <div style="position: absolute; top: 10px; right: 10px;">
+        <button onclick="location.href='Local/selectLocal.html'">목록으로</button>
+    </div>
+
     <script>
         const cities= {
             seoul : ["강남/역삼/삼성", "신사/청담/압구정", "서초/교대/강동", "을지로/명동/중구/동대문", "서울역/이태원/용산", "종로/인사동", "홍대/합정/마포/서대문", "여의도", "영등포역", "구로/신도림/금천", "김포공항/염창/강서", "건대입구/성수/왕십리", "성북/강북/노원/도봉"],
@@ -72,14 +76,11 @@
         function addReg() {
             const provinceSelect = document.getElementById("province");
             const citySelect = document.getElementById("city");
-            const valueProv = provinceSelect.value;
             const valueCity = citySelect.value;
 
-            if(valueCity != "" && valueProv != "") {
-                alert("추가되었습니다.")
-            }
-            else {
-                alert("지역을 선택해주세요.")
+            if(!valueCity) {
+                alert("지역을 선택해 주세요.");
+                return;
             }
         }
     </script>
