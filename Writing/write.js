@@ -34,17 +34,18 @@ document.addEventListener("DOMContentLoaded", function () {
         event.preventDefault();
         const citySelect = document.getElementById("city");
         const valueCity = citySelect.value;
-        // const selectedList = document.getElementById("selectedList");
+        const selectedList = document.getElementById("selectedList");
 
         if (!valueCity) {
             alert("지역을 선택해 주세요.");
             return;
         }
 
-        // const regionList = document.createElement("li");
-        // regionList.textContent = valueCity;
+        const regionList = document.createElement("li");
+        regionList.textContent = valueCity;
 
-        // selectedList.appendChild(listItem);
+        selectedList.appendChild(regionList);
+        alert("추가되었습니다.");
     });
 
     document.querySelector("form").addEventListener("submit", function (event) {
