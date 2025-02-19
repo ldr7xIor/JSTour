@@ -1,4 +1,4 @@
-ㅌ# JSTour
+# JSTour
 ![image](https://github.com/user-attachments/assets/eb9f5ccb-d0fc-470f-b5d4-54c5db3a09b9)
 ### 주제 수정
 ![image](https://github.com/user-attachments/assets/ced84a8e-75c8-4edb-acf8-d52315312725)
@@ -20,7 +20,9 @@
   <li><a href="myPage" class="page">마이 페이지</a>에서 메인 페이지로 이동 가능 [25.02.13]</li>
   <li>로그인 페이지에서 로그인 하면 마이 페이지로 가는거 메인 페이지로 이동하게 수정 [25.02.14]</li>
   <li>회원가입 후 로그인 하면 기본 이미지로 나기가 들어가게 설정함 [25.02.17]</li>
-  <li><a href="mainpage.html" class="page">메인 페이지</a>에서 기본 이미지 띄우는 경로문제 해결, <a href="login" class="page">로그인 페이지</a> 로그인·회원가입할 때 autofocus 및 엔터 submit 설정 [25.02.18]</li>
+  <li>메인 페이지에서 기본 이미지 띄우는 경로문제 해결, <a href="login" class="page">로그인 페이지</a> 로그인·회원가입할 때 autofocus 및 엔터 submit 설정 [25.02.18]</li>
+  <li><a href="mainpage.html" class="page">메인 페이지</a>에서 로그인 해야 글 작성 보이게 수정 [25.02.19]</li>
+  <li><a href="Writing" class="page">글 작성 페이지</a>에 textarea 추가 및 등록, 취소버튼 생성과 js 분리. js엔 모든 필드를 채워야 submit 가능하도록 기능 추가 [25.02.19]</li>
 </ur>
 
 ## 한비 진행상황
