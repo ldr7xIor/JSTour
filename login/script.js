@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
         window.location.href = "login.html";
     }
 
-    function handleLogin(e) {
+    /*function handleLogin(e) {
         e.preventDefault();
         const id = document.getElementById("loginId").value.trim();
         const password = document.getElementById("loginPassword").value;
@@ -78,5 +78,5 @@ document.addEventListener("DOMContentLoaded", function () {
         setTimeout(() => {
             window.location.href = "../mainpage.html";
         }, 1000);
-    }
+    }*/
 });
