@@ -45,6 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
         regionList.textContent = valueCity;
 
         selectedList.appendChild(regionList);
+        console.log("추가되었습니다. : " + valueCity);
         alert("추가되었습니다.");
     });
 
