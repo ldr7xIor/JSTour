@@ -41,11 +41,18 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
+        for(let item of selectedList.children) {
+            if(item.textContent == valueCity) {
+                alert("이미 추가된 지역입니다.")
+                return;
+            }
+        }
+
         const regionList = document.createElement("li");
         regionList.textContent = valueCity;
+        regionList.classList.add("red-text");
 
         selectedList.appendChild(regionList);
-        console.log("추가되었습니다. : " + valueCity);
         alert("추가되었습니다.");
     });
 
