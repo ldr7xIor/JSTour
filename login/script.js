@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const id = document.getElementById("signupId").value.trim();
         const password = document.getElementById("signupPassword").value;
         const passwordConfirm = document.getElementById("password_confirm").value;
-        const defaultProfilePicture = "https://ldr7xior.github.io/JSTour/myPage/나기.jpg";
+        const defaultProfilePicture = "/myPage/나기.jpg";
 
         if (!name || !id || !password || !passwordConfirm) {
             alert("모든 필드를 입력해주세요.");

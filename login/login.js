@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             sessionStorage.setItem("loggedInUser", id);
-            window.location.href = "../mainpage.html";
+            window.location.href = "../mainpage/mainpage.html";
         });
     }
 });
