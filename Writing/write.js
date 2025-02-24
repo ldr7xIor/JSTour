@@ -133,8 +133,9 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
 
-        const regionList = document.createElement("li");
+        const regionList = document.createElement("div");
         regionList.textContent = valueCity;
+        regionList.classList.add("region-item");
 
         const deleteButton = document.createElement("button");
         deleteButton.textContent = "삭제";
@@ -152,7 +153,7 @@ document.addEventListener("DOMContentLoaded", function () {
         event.preventDefault();
         const titleInput = document.getElementById("reviewTitle").value.trim();
         const textArea = document.getElementById("reviewTextarea").value.trim();
-        const selectedRegions = Array.from(document.querySelectorAll("#selectedList li"))
+        const selectedRegions = Array.from(document.querySelectorAll("#selectedList div"))
             .map(li => li.textContent.replace("삭제", "").trim());
 
         if (!titleInput || !textArea || selectedRegions.length === 0) {
@@ -163,7 +164,10 @@ document.addEventListener("DOMContentLoaded", function () {
         // 로그인한 사용자 정보 가져오기
         let loggedInUser = sessionStorage.getItem("loggedInUser");
         if (!loggedInUser) {
-            alert("로그인 후 글을 작성할 수 있습니다.");
+            // alert("로그인 후 글을 작성할 수 있습니다.");
+            if(confirm("로그인 후 글을 작성할 수 있습니다. 로그인 페이지로 이동할까요?")) {
+                window.location.href = "../login/login.html";
+            }
             return;
         }
 
@@ -188,6 +192,17 @@ document.addEventListener("DOMContentLoaded", function () {
         localStorage.setItem("posts", JSON.stringify(posts));
 
         alert("등록되었습니다.");
+        window.location.href = "../Local/selectLocal.html";
+    });
+
+    document.querySelector("form").addEventListener("reset", function(event) {
+        confirmReset = confirm("정말로 작성을 취소하시겠습니까?");
+        if(!confirmReset) {
+            event.preventDefault();
+            return;
+        }
+
+        document.getElementById("selectedList");
         window.location.href = "../Local/selectLocal.html";
     });
 

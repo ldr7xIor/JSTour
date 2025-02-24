@@ -1,21 +1,19 @@
-.red-text {
+#selectedList {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+    max-width: 1000px;
+}
+
+.region-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
     color: orangered;
     font-size: 12px;
     font-family: Arial, sans-serif;
     font-weight: bold;
-}
-
-#selectedList {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    /* padding: 10px; */
-}
-
-#selectedList li {
-    width: 150px;
-    height: 50px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    text-align: center;
 }
