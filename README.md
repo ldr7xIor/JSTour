@@ -22,10 +22,13 @@
   <li>회원가입 후 로그인 하면 기본 이미지로 나기가 들어가게 설정함 [25.02.17]</li>
   <li>메인 페이지에서 기본 이미지 띄우는 경로문제 해결, <a href="login" class="page">로그인 페이지</a> 로그인·회원가입할 때 autofocus 및 엔터 submit 설정 [25.02.18]</li>
   <li>메인 페이지에서 로그인 해야 글 작성 보이게 수정 [25.02.19]</li>
-  <li><a href="Writing" class="page">글 작성 페이지</a>에 textarea 추가 및 등록, 취소버튼 생성과 js 분리. js엔 모든 필드를 채워야 submit 가능하도록 기능 추가 [25.02.19]</li>
+  <li>글 작성 페이지에 textarea 추가 및 등록, 취소버튼 생성과 js 분리. js엔 모든 필드를 채워야 submit 가능하도록 기능 추가 [25.02.19]</li>
   <li>Local에서 selectLocal html, js 분리함 [25.02.20]</li>
   <li><a href="mainpage" class="page">메인 페이지</a> 파일 생성 및 파일 생성에 따른 다른 파일들 경로 수정 [25.02.21]</li>
-  <li><a href="Local" class="page">selectLocal 페이지</a>에서 로그인 유지되게 하고 확인 및 로그아웃 할 수 있게 함. [25.02.21]</li>
+  <li>selectLocal 페이지에서 로그인 유지되게 하고 확인 및 로그아웃 할 수 있게 함. [25.02.21]</li>
+  <li><a href="Writing" class="page">글 작성</a>하면 <a href="Local" class="page">selectLocal 페이지</a>에서 볼 수 있게 함. [25.02.24]</li>
+  <li>작성한 리뷰 더 자세히 볼 수 있는 페이지 reviewDetail.html, js 만듦 [25.02.24]</li>
+  <li>!! 근데 아직 reviewDetail이 제대로 기능 안해서 내일 손 봐야함.</li>
 </ur>
 
 ## 한비 진행상황
