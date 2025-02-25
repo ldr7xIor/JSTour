@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 postItem.innerHTML = `
                     <strong>${post.title}</strong> - <em>${post.timestamp}</em><br>
                     <small>지역: ${post.regions.join(", ")}</small><br>
-                    <button onclick="location.href='https://ldr7xior.github.io/JSTour/Local/reviewDetail.html?id=${post.id}'">자세히 보기</button>
+                    <button onclick="location.href='../Local/reviewDetail.html?id=${post.id}'">자세히 보기</button>
                 `;
                 myPostList.appendChild(postItem);
             });
