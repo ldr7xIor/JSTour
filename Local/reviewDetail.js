@@ -8,8 +8,8 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
     }
 
-    let reviews = JSON.parse(localStorage.getItem("reviews")) || [];
-    let review = reviews.find(r => r.id === reviewId);
+    let reviews = JSON.parse(localStorage.getItem("posts")) || [];
+    let review = reviews.find(r => r.id === Number(reviewId)); // Number 변환하여 비교
 
     if (!review) {
         alert("존재하지 않는 게시글입니다.");
@@ -19,6 +19,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.getElementById("reviewTitle").textContent = review.title;
     document.getElementById("reviewAuthor").textContent = review.author;
-    document.getElementById("reviewDate").textContent = review.date;
+    document.getElementById("reviewDate").textContent = review.timestamp; // timestamp 추가
     document.getElementById("reviewContent").textContent = review.content;
+
+    // 지역 정보 추가
+    const regionElement = document.createElement("p");
+    regionElement.innerHTML = `<strong>지역:</strong> ${review.regions.join(", ")}`;
+    document.getElementById("reviewContent").after(regionElement);
 });

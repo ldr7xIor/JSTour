@@ -6,8 +6,16 @@
     <title>내가 쓴 글</title>
 </head>
 <body>
-    <h2>내가 쓴 글</h2>
-    <button type="button">검색</button><br>
+    <h2><a href="postlist.html">내가 쓴 글</a></h2>
+
+    <!-- 검색 입력창 추가 -->
+    <input type="text" id="searchInput" placeholder="검색어를 입력하세요">
+    <button type="button" id="searchButton">검색</button><br>
+
     <button type="submit" onclick="location.href='mypage.html'">돌아가기</button>
+
+    <ul id="myPostList"></ul> <!-- 사용자의 글 목록을 표시할 곳 -->
+
+    <script defer src="postlist.js"></script> 
 </body>
 </html>

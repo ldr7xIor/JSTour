@@ -27,149 +27,6 @@ function updateCities(){
     }
 }
 
-// function writingReview() {
-//     const provinceSelect = document.getElementById("province").value;
-//     const citySelect = document.getElementById("city").value;
-//     const btnexist = document.getElementById("WriteBtn")
-
-//     if(provinceSelect == "seoul" && citySelect == "강남/역삼/삼성") {
-//         if(!btnexist) {
-//             const btn = document.createElement("button");
-//             btn.textContent = "글 작성";
-//             btn.id = "WriteBtn";
-//             btn.onclick = function() {
-//                 location.href='../Writing/writeReview.html'
-//             };
-//             document.body.appendChild(btn);
-//         }
-//     } else {
-//         if(btnexist) {
-//             btnexist.remove();
-//         }
-//     }
-// }
-
-function writingReview() {
-    const btnexist = document.getElementById("WriteBtn")
-    if(!btnexist) {
-        const btn = document.createElement("button");
-        btn.textContent = "글 작성";
-        btn.id = "WriteBtn";
-        btn.onclick = function() {
-            location.href='../Writing/writeReview.html'
-        };
-        document.body.appendChild(btn);
-    }
-    if(btnexist) {
-        btnexist.remove();
-    }
-}
-
-// document.addEventListener("DOMContentLoaded", function () {
-//     let loggedInUser = sessionStorage.getItem("loggedInUser");
-//     const writeButton = document.querySelector("button[onclick*='writeReview.html']");
-
-//     if (loggedInUser) {
-//         let userData = JSON.parse(localStorage.getItem(loggedInUser));
-
-//         if (userData) {
-//             const navBar = document.getElementById("nav-bar");
-//             navBar.innerHTML = `
-//                 <div id="profile">
-//                     <img src="${userData.profilePicture}" alt="Profile">
-//                     <span>${userData.name}</span>
-//                     <a href="../myPage/mypage.html">마이페이지</a> /
-//                     <a href="#" id="logout">로그아웃</a>
-//                 </div>
-//             `;
-
-//             if (writeButton) {
-//                 writeButton.style.display = "inline-block";
-//             }
-
-//             // 로그아웃 기능
-//             document.getElementById("logout").addEventListener("click", function () {
-//                 sessionStorage.removeItem("loggedInUser"); // 로그인 상태 해제
-//                 window.location.reload();
-//             });
-//         }
-//     } else {
-//         if (writeButton) {
-//             writeButton.style.display = "none";
-//         }
-//     }
-// });
-
-
-// document.addEventListener("DOMContentLoaded", function () {
-//     let loggedInUser = sessionStorage.getItem("loggedInUser");
-//     const writeButton = document.querySelector("button[onclick*='writeReview.html']");
-    
-//     if (loggedInUser) {
-//         let userData = JSON.parse(localStorage.getItem(loggedInUser));
-//         if (userData) {
-//             const navBar = document.getElementById("nav-bar");
-//             navBar.innerHTML = `
-//                 <div id="profile">
-//                     <img src="${userData.profilePicture}" alt="Profile">
-//                     <span>${userData.name}</span>
-//                     <a href="../myPage/mypage.html">마이페이지</a> /
-//                     <a href="#" id="logout">로그아웃</a>
-//                 </div>
-//             `;
-
-//             if (writeButton) {
-//                 writeButton.style.display = "inline-block";
-//             }
-
-//             document.getElementById("logout").addEventListener("click", function () {
-//                 sessionStorage.removeItem("loggedInUser");
-//                 window.location.reload();
-//             });
-//         }
-//     } else {
-//         if (writeButton) {
-//             writeButton.style.display = "none";
-//         }
-//     }
-
-//     // 게시글 목록 불러오기
-//     function loadPosts() {
-//         const postList = document.createElement("ul");
-//         const posts = JSON.parse(localStorage.getItem("posts")) || [];
-
-//         if (posts.length === 0) {
-//             postList.innerHTML = "<p>등록된 글이 없습니다.</p>";
-//         } else {
-//             posts.reverse().forEach(post => {
-//                 const postItem = document.createElement("li");
-//                 postItem.innerHTML = `
-//                     <strong>${post.title}</strong> - <em>${post.author}</em> (${post.timestamp})<br>
-//                     <small>지역: ${post.regions.join(", ")}</small><br>
-//                     <button onclick="viewPost(${post.id})">자세히 보기</button>
-//                 `;
-//                 postList.appendChild(postItem);
-//             });
-//         }
-
-//         document.body.appendChild(postList);
-//     }
-
-//     loadPosts();
-// });
-
-// // 게시글 상세보기 (추가 가능)
-// function viewPost(postId) {
-//     const posts = JSON.parse(localStorage.getItem("posts")) || [];
-//     const post = posts.find(p => p.id === postId);
-
-//     if (post) {
-//         alert(`제목: ${post.title}\n작성자: ${post.author}\n시간: ${post.timestamp}\n\n${post.content}`);
-//     } else {
-//         alert("게시글을 찾을 수 없습니다.");
-//     }
-// }
-
 document.addEventListener("DOMContentLoaded", function () {
     let loggedInUser = sessionStorage.getItem("loggedInUser");
     const writeButton = document.querySelector("button[onclick*='writeReview.html']");
@@ -204,28 +61,43 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // 게시글 목록 불러오기
-    function loadPosts() {
-        const postList = document.createElement("ul");
-        postList.id = "postList";
-        const posts = JSON.parse(localStorage.getItem("posts")) || [];
+    function loadPosts(filterRegion = "") {
+        const postListContainer = document.getElementById("postListContainer");
+        if (!postListContainer) {
+            return;
+        }
 
-        if (posts.length === 0) {
-            postList.innerHTML = "<p>등록된 글이 없습니다.</p>";
+        postListContainer.innerHTML = ""; // 기존 목록 초기화
+
+        const posts = JSON.parse(localStorage.getItem("posts")) || [];
+        const filteredPosts = filterRegion
+            ? posts.filter(post => post.regions.includes(filterRegion))
+            : posts;
+
+        if (filteredPosts.length === 0) {
+            postListContainer.innerHTML = "<p>등록된 글이 없습니다.</p>";
         } else {
-            posts.reverse().forEach(post => {
+            const postList = document.createElement("ul");
+            filteredPosts.reverse().forEach(post => {
                 const postItem = document.createElement("li");
                 postItem.innerHTML = `
                     <strong>${post.title}</strong> - <em>${post.author}</em> (${post.timestamp})<br>
                     <small>지역: ${post.regions.join(", ")}</small><br>
                     <button onclick="location.href='reviewDetail.html?id=${post.id}'">자세히 보기</button>
                 `;
+                // 위에 절대경로로 넣을 것것
                 postList.appendChild(postItem);
             });
+            postListContainer.appendChild(postList);
         }
-
-        document.body.appendChild(postList);
     }
+
+    function filterPostsByRegion() {
+        const selectedRegion = document.getElementById("city").value;
+        loadPosts(selectedRegion);
+    }
+
+    document.getElementById("city").addEventListener("change", filterPostsByRegion);
 
     loadPosts();
 });
