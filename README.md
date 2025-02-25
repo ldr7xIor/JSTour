@@ -17,7 +17,7 @@
   <li>마이 페이지 프로필 사진도 수정 가능 [25.02.12]</li>
   <li>로그인 페이지, 로그인 후 다른 페이지로 리디렉션 성공 [25.02.12]</li>
   <li>메인 페이지에서 로그인 하면 프로필 사진, 닉네임, 마이페이지 이동이 뜸. js 추가[25.02.13]</li>
-  <li><a href="myPage" class="page">마이 페이지</a>에서 메인 페이지로 이동 가능 [25.02.13]</li>
+  <li>마이 페이지에서 메인 페이지로 이동 가능 [25.02.13]</li>
   <li>로그인 페이지에서 로그인 하면 마이 페이지로 가는거 메인 페이지로 이동하게 수정 [25.02.14]</li>
   <li>회원가입 후 로그인 하면 기본 이미지로 나기가 들어가게 설정함 [25.02.17]</li>
   <li>메인 페이지에서 기본 이미지 띄우는 경로문제 해결, <a href="login" class="page">로그인 페이지</a> 로그인·회원가입할 때 autofocus 및 엔터 submit 설정 [25.02.18]</li>
@@ -26,9 +26,11 @@
   <li>Local에서 selectLocal html, js 분리함 [25.02.20]</li>
   <li><a href="mainpage" class="page">메인 페이지</a> 파일 생성 및 파일 생성에 따른 다른 파일들 경로 수정 [25.02.21]</li>
   <li>selectLocal 페이지에서 로그인 유지되게 하고 확인 및 로그아웃 할 수 있게 함. [25.02.21]</li>
-  <li><a href="Writing" class="page">글 작성</a>하면 <a href="Local" class="page">selectLocal 페이지</a>에서 볼 수 있게 함. [25.02.24]</li>
+  <li><a href="Writing" class="page">글 작성</a>하면 selectLocal 페이지에서 볼 수 있게 함. [25.02.24]</li>
   <li>작성한 리뷰 더 자세히 볼 수 있는 페이지 reviewDetail.html, js 만듦 [25.02.24]</li>
-  <li>!! 근데 아직 reviewDetail이 제대로 기능 안해서 내일 손 봐야함.</li>
+  <li>selectLocal에서 선택한 지역의 글만 볼 수 있게 수정함 [25.02.25]</li>
+  <li><a href="Local" class="page">reviewDetail 페이지</a> 제대로 작동할 수 있게 js 수정 -> 제대로 작동함 [25.02.25]</li>
+  <li><a href="myPage" class="page">마이 페이지</a>에서 내가 쓴 글 확인할 수 있고 검색도 가능 [25.02.25]</li>
 </ur>
 
 ## 한비 진행상황
