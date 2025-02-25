@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 postItem.innerHTML = `
                     <strong>${post.title}</strong> - <em>${post.author}</em> (${post.timestamp})<br>
                     <small>지역: ${post.regions.join(", ")}</small><br>
-                    <button onclick="location.href='https://ldr7xior.github.io/JSTour/Local/reviewDetail.html?id=${post.id}'">자세히 보기</button>
+                    <button onclick="location.href='reviewDetail.html?id=${post.id}'">자세히 보기</button>
                 `;
                 // 위에 절대경로로 넣을 것것
                 postList.appendChild(postItem);
