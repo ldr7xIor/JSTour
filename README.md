@@ -29,8 +29,9 @@
   <li><a href="Writing" class="page">글 작성</a>하면 selectLocal 페이지에서 볼 수 있게 함. [25.02.24]</li>
   <li>작성한 리뷰 더 자세히 볼 수 있는 페이지 reviewDetail.html, js 만듦 [25.02.24]</li>
   <li>selectLocal에서 선택한 지역의 글만 볼 수 있게 수정함 [25.02.25]</li>
-  <li><a href="Local" class="page">reviewDetail 페이지</a> 제대로 작동할 수 있게 js 수정 -> 제대로 작동함 [25.02.25]</li>
+  <li>reviewDetail 페이지 제대로 작동할 수 있게 js 수정 -> 제대로 작동함 [25.02.25]</li>
   <li><a href="myPage" class="page">마이 페이지</a>에서 내가 쓴 글 확인할 수 있고 검색도 가능 [25.02.25]</li>
+  <li><a href="Local" class="page">reviewDetail 페이지</a> 수정함 / 내 글 보기 목록으로 누르면 전체 글 목록 페이지로 이동하던거 내 글 보기 목록으로 갈 수 있게 수정 [25.02.26]</li>
 </ur>
 
 ## 한비 진행상황
