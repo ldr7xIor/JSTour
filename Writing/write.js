@@ -242,3 +242,10 @@ document.addEventListener("DOMContentLoaded", function () {
 //     });
     
 });
+
+// 추천 수치 생성 코드 (미완성)
+// const stars = document.getElementById("starReview");
+
+// stars.addEventListener("click", (event) => {
+//     if(event.targey)
+// })

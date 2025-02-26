@@ -17,3 +17,17 @@
     font-family: Arial, sans-serif;
     font-weight: bold;
 }
+
+.stars {
+    font-size: 40px;
+    cursor: pointer;
+    color: gray;
+}
+
+.stars.active {
+    color : gold;
+}
+
+#starReview {
+    display: inline-block;
+}

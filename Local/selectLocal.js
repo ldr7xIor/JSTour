@@ -45,6 +45,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 </div>
             `;
 
+            document.getElementById("loginAlarm").remove();
+
             if (writeButton) {
                 writeButton.style.display = "inline-block";
             }
@@ -84,6 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <strong>${post.title}</strong> - <em>${post.author}</em> (${post.timestamp})<br>
                     <small>지역: ${post.regions.join(", ")}</small><br>
                     <button onclick="location.href='reviewDetail.html?id=${post.id}'">자세히 보기</button>
+                    <br><br>
                 `;
                 // 위에 절대경로로 넣을 것것
                 postList.appendChild(postItem);
