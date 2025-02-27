@@ -4,7 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>리뷰 상세</title>
-    <link rel="stylesheet" href="reviewDetail.css">
+    <style>
+        .comment-profile {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+    </style>  
 </head>
 <body>
     <h2 id="reviewTitle"></h2>
@@ -12,9 +18,18 @@
     <p><strong>작성 시간:</strong> <span id="reviewDate"></span></p>
     <p><strong>내용</strong></p>
     <p id="reviewContent"></p>
-
+    
+    
     <button onclick="history.back()">목록으로</button>
 
-    <script defer src="reviewDetail.js"></script>
+    <h3>댓글</h3>
+    <div id="commentSection">
+        <textarea id="commentInput" placeholder="댓글을 입력하세요."></textarea>
+        <button onclick="postComment()">댓글 작성</button>
+    </div>
+
+    <ul id="commentList"></ul>
+
+    <script src="reviewDetail.js"></script>
 </body>
 </html>

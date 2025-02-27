@@ -4,10 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>내가 쓴 댓글</title>
+    <style>
+        .comment-profile {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+    </style>  
 </head>
 <body>
     <h2>내가 쓴 댓글</h2>
+
     <button type="button">검색</button><br>
+    <ul id="myCommentList"></ul>
     <button type="submit" onclick="location.href='mypage.html'">돌아가기</button>
+
+    <script src="commentlist.js"></script>
 </body>
 </html>
