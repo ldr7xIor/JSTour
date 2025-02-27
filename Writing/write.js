@@ -156,8 +156,8 @@ document.addEventListener("DOMContentLoaded", function () {
         const selectedRegions = Array.from(document.querySelectorAll("#selectedList div"))
             .map(li => li.textContent.replace("삭제", "").trim());
 
-        if (!titleInput || !textArea || selectedRegions.length === 0) {
-            alert("제목, 내용, 지역을 모두 입력해야 합니다.");
+        if (!titleInput || !textArea || selectedRegions.length === 0 || rating === 0) {
+            alert("제목, 내용, 지역, 별점을 모두 입력해야 합니다.");
             return;
         }
 
@@ -244,8 +244,22 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // 추천 수치 생성 코드 (미완성)
-// const stars = document.getElementById("starReview");
+const stars = document.getElementById("starReview");
+const ratingValue = document.getElementById("ratingValue");
+let rating = 0;
 
-// stars.addEventListener("click", (event) => {
-//     if(event.targey)
-// })
+stars.addEventListener("click", (event) => {
+    if(event.target.tagName === "SPAN") {
+        rating = [...stars.children].indexOf(event.target) + 1;
+        // ratingValue.innerText = rating; //별 옆에 점수 보여주는 코드 (숫자가 이상하게 나와서 주석처리)
+        updateStars(rating);
+    }
+});
+
+function updateStars(rating) {
+    [...stars.children].forEach((star, index) => {
+        star.classList.toggle("active", index < rating);
+    });
+}
+
+stars.innerHTML = "★ ★ ★ ★ ★".split("").map(star => `<span class="stars">${star}</span>`).join("");

@@ -84,8 +84,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     <strong>${post.title}</strong> - <em>${post.author}</em> (${post.timestamp})<br>
                     <small>지역: ${post.regions.join(", ")}</small><br>
                     <button onclick="location.href='reviewDetail.html?id=${post.id}'">자세히 보기</button>
+                    <br><br>
                 `;
                 // 위에 절대경로로 넣을 것것
+                // 위에 <br> 너무 자세히보기 버튼이랑 그다음 글이랑 붙어있어서 넣어놨음.. 오류 생기면 삭제
                 postList.appendChild(postItem);
             });
             postListContainer.appendChild(postList);
