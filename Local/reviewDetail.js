@@ -38,12 +38,17 @@ function postComment() {
         return;
     }
 
-    let comments = JSON.parse(localStorage.getItem("comments")) || [];
-    let timestamp = new Date().toLocaleString(); // 댓글 작성 시간
+    const params = new URLSearchParams(window.location.search);
+    const reviewId = params.get("id"); // 현재 글의 ID 가져오기
+    if (!reviewId) return;
+
+    let comments = JSON.parse(localStorage.getItem(`comments_${reviewId}`)) || [];
+    let timestamp = new Date().toLocaleString();
 
     let commentData = {
         text: commentText,
-        timestamp: timestamp
+        timestamp: timestamp,
+        reviewId: reviewId // 댓글에 해당 글 ID 추가
     };
 
     if (loggedInUser) {
@@ -57,9 +62,15 @@ function postComment() {
     }
 
     comments.push(commentData);
-    localStorage.setItem("comments", JSON.stringify(comments));
+    localStorage.setItem(`comments_${reviewId}`, JSON.stringify(comments));
 
-    commentInput.value = ""; // 입력창 초기화
+    // "내가 쓴 댓글" 목록에도 저장
+    let allComments = JSON.parse(localStorage.getItem("comments")) || [];
+    commentData.reviewId = reviewId; // 🛠 reviewId를 명확히 추가
+    allComments.push(commentData);
+    localStorage.setItem("comments", JSON.stringify(allComments));
+
+    commentInput.value = ""; 
     loadComments();
 }
 
@@ -67,7 +78,11 @@ function loadComments() {
     let commentList = document.getElementById("commentList");
     commentList.innerHTML = "";
 
-    let comments = JSON.parse(localStorage.getItem("comments")) || [];
+    const params = new URLSearchParams(window.location.search);
+    const reviewId = params.get("id");
+    if (!reviewId) return;
+
+    let comments = JSON.parse(localStorage.getItem(`comments_${reviewId}`)) || [];
 
     comments.forEach(comment => {
         let listItem = document.createElement("li");
@@ -81,4 +96,5 @@ function loadComments() {
         commentList.appendChild(listItem);
     });
 }
+
 
